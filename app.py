@@ -35,7 +35,6 @@ def clean_text(text):
 # print(clean_text('hii my name is shaukat.'))
 
 
-# Streamlit App
 st.title("Sentiment Analysis App 😊😞")
 st.write("Enter a review to predict its sentiment:")
 
