@@ -14,14 +14,10 @@ with open('nb_model2500.pkl', 'rb') as f:
 
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
-nltk.data.path.append('.\\nltk_data')
-
-# Download models only if not available
-for resource in ['punkt', 'omw-1.4', 'wordnet']:
-    try:
-        nltk.data.find(f'tokenizers/{resource}')
-    except LookupError:
-        nltk.download(resource, download_dir='.\\nltk_data')
+from nltk.tokenize import word_tokenize
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('omw-1.4')
 
 def clean_text(text):
     lemma = WordNetLemmatizer()
